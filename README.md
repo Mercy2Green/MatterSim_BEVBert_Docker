@@ -4,14 +4,14 @@ The original BEV-Bert website is:https://github.com/MarSaKi/VLN-BEVBert
 
 Thanks so much for their efforts.
 
-# Docker for MatterSim + BEVBert
+# Docker for MatterSim + BEVBert（+Habitat）
 
-This is a docker that contain both Mattersim and BEVBert. For whom what to persue the VLN research.
+This is a docker that contains both Mattersim and BEVBert. For those who want to pursue the VLN research.
 
 
 If you want to build this docker, please follow the instructions below.
 
-Fisrt, you need to clone this project:
+First, you need to clone this project:
 
 ```
 git clone https://github.com/Mercy2Green/MatterSim_BEVBert_Docker.git
@@ -33,9 +33,6 @@ docker run --gpus all -it mattersim:11.3.0-devel-ubuntu20.04
 
 Next, you will need to edit the shell file. There are some PATH you will need to rewrite as you need.
 
-Oh, you will need the Matterport3Dsimulator_opencv4 version, which I already provided.
-I also provide a copy of VLN-BEVBert which is as same as the orignal BEVBert. You can clone the orignal one if you want.
-
 ```
 export MATTERPORT_DATA_DIR=path/to/v1/unzipped
 export MATTERPORT_SIMULATOR_DIR=./Matterport3DSimulator_opencv4
@@ -46,6 +43,9 @@ export BEVBERT_DIR=./VLN-BEVBert
 export HABITAT_DATA_DIR=path/to/mp3d
 ```
 
+Oh, you will need the Matterport3Dsimulator_opencv4 version, which I already provided.
+I also provide a copy of VLN-BEVBert which is as same as the original BEVBert. You can clone the original one if you want.
+
 After you rewrite these PATH, you can use the shell to enter the docker.
 
 ```
@@ -54,9 +54,9 @@ After you rewrite these PATH, you can use the shell to enter the docker.
 
 ## MatterSim
 
-Then, in the docker, enter the PATH of the Matterport3DSimulator_opencv4 to compline it.
+Then, in the docker, enter the PATH of the Matterport3DSimulator_opencv4 to build it.
 
-If their is a build folder, you will need to delete it first.
+If there is a build folder, you will need to delete it first.
 
 ```
 cd /root/mount/Matterport3DSimulator
@@ -71,11 +71,11 @@ You can test the MatterSim by using:
 ```
 ./build/tests ~Timing
 ```
-If all the test is passed, which means you will see only green without any red error or worrging.
+If all the test is passed, which means you will see only green without any red errors.
 
-If the terminal shows that "Segment dumped", don't worry, It just because the memeory of your computer is not enough to perform some of the test task. But it won't be a problem.
+If the terminal shows that "Segment dumped", don't worry, It is just because the memory of your computer is not enough to perform some of the test tasks. But it won't be a problem.
 
-Ok, so ,your MatterSim is ready to go. We can test the BEVBert next.
+Ok, so, your MatterSim is ready to go. We can test the BEVBert next.
 
 ## BEVBert
 
@@ -83,12 +83,12 @@ Since we using --mount to mount the BEVBert folder on the docker, you will need 
 
 For example, if you want to test the "grid_mp3d_clip.py.", you will need to change the data folder PATH in the "grid_mp3d_clip.py."
 
-You can using the code below to test if the MatterSim is fine.
+You can use the code below to test if the MatterSim is fine.
 ```
 python precompute_features/grid_mp3d_clip.py
 ```
 
-You can using the code below to test if the Habitat is fine.
+You can use the code below to test if the Habitat is fine.
 ```
 python precompute_features/grid_depth.py
 ```
