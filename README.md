@@ -1,6 +1,6 @@
-The original MatterSim website is:
+The original MatterSim website is:https://github.com/peteanderson80/Matterport3DSimulator
 
-The original BEV-Bert website is:
+The original BEV-Bert website is:https://github.com/MarSaKi/VLN-BEVBert
 
 Thanks so much for their efforts.
 
