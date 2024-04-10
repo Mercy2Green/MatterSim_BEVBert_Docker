@@ -6,19 +6,6 @@ FROM nvidia/cudagl:11.3.0-devel-ubuntu20.04
 
 SHELL ["/bin/bash", "-c"]
 
-# Install cudnn
-# ENV CUDNN_VERSION 8.2.2.26
-# LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
-
-# RUN apt-get update && apt-get install -y --no-install-recommends \
-#     libcudnn8=$CUDNN_VERSION-1+cuda11.4 \
-# libcudnn8-dev=$CUDNN_VERSION-1+cuda11.4 \
-# && \
-#     apt-mark hold libcudnn8 && \
-#     rm -rf /var/lib/apt/lists/*
-
-
-
 ENV cudnn_version=8.2.1.32
 ENV cuda_version=cuda11.3
 LABEL com.nvidia.cudnn.version="${cudnn_version}"
@@ -107,7 +94,3 @@ ENV PYTHONPATH=/root/mount/Matterport3DSimulator/build
 
 RUN source activate bevbert && \
     conda env config vars set PYTHONPATH=/root/mount/Matterport3DSimulator/build
-
-# RUN cp /opt/conda/lib/libstdc++.so.6.0.29 /usr/lib/x86_64-linux-gnu/ && \
-#     rm /usr/lib/x86_64-linux-gnu/libstdc++.so.6 && \
-#     ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.29 /usr/lib/x86_64-linux-gnu/libstdc++.so.6
