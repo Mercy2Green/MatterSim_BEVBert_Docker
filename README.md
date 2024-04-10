@@ -54,7 +54,7 @@ After you rewrite these PATH, you can use the shell to enter the docker.
 
 ## MatterSim
 
-Then, in the docker, enter the PATH of the Matterport3DSimulator_opencv4 to compline it.
+Then, in the docker, enter the PATH of the Matterport3DSimulator_opencv4 to build it.
 
 If there is a build folder, you will need to delete it first.
 
