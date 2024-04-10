@@ -71,7 +71,7 @@ You can test the MatterSim by using:
 ```
 ./build/tests ~Timing
 ```
-If all the test is passed, which means you will see only green without any red errors or worrying.
+If all the test is passed, which means you will see only green without any red errors.
 
 If the terminal shows that "Segment dumped", don't worry, It is just because the memory of your computer is not enough to perform some of the test tasks. But it won't be a problem.
 
