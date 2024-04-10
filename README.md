@@ -33,9 +33,6 @@ docker run --gpus all -it mattersim:11.3.0-devel-ubuntu20.04
 
 Next, you will need to edit the shell file. There are some PATH you will need to rewrite as you need.
 
-Oh, you will need the Matterport3Dsimulator_opencv4 version, which I already provided.
-I also provide a copy of VLN-BEVBert which is as same as the original BEVBert. You can clone the original one if you want.
-
 ```
 export MATTERPORT_DATA_DIR=path/to/v1/unzipped
 export MATTERPORT_SIMULATOR_DIR=./Matterport3DSimulator_opencv4
@@ -45,6 +42,9 @@ export BEVBERT_DIR=./VLN-BEVBert
 
 export HABITAT_DATA_DIR=path/to/mp3d
 ```
+
+Oh, you will need the Matterport3Dsimulator_opencv4 version, which I already provided.
+I also provide a copy of VLN-BEVBert which is as same as the original BEVBert. You can clone the original one if you want.
 
 After you rewrite these PATH, you can use the shell to enter the docker.
 
