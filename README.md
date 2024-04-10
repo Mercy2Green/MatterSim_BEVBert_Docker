@@ -4,7 +4,7 @@ The original BEV-Bert website is:https://github.com/MarSaKi/VLN-BEVBert
 
 Thanks so much for their efforts.
 
-# Docker for MatterSim + BEVBert
+# Docker for MatterSim + BEVBert（+Habitat）
 
 This is a docker that contains both Mattersim and BEVBert. For those who want to pursue the VLN research.
 
